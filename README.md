@@ -19,8 +19,6 @@ Task 5 – Queue<BankAccount> holds account opening requests. Admin approves →
 Task 6 – BankAccount[3] fixed array with 3 predefined accounts.
 Part 3 – Menu with Bank, ATM, and Admin sections integrating all structures above.
 
-Screenshots
-
 
 Summary
 The project simulates a basic banking system using core Java data structures.
