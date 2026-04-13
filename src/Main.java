@@ -15,7 +15,6 @@ public class Main {
         }
         System.out.println();
 
-        // ── Part 3: Mini Banking Menu ──────────────────────────────────────
-        MiniBankingMenu.main(args);
+        assignment.run();
     }
 }

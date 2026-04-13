@@ -4,8 +4,8 @@ public class MiniBankingMenu {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        LinkedList<BankAccount> Accounts = new LinkedList<>();
-        Stack<String> transactions = new Stack<>();
+        LinkedList<BankAccount> Accounts = new LinkedList<>(); // Task 1. LinkedList
+        Stack<String> transactions = new Stack<>(); // Task 3, Stack<String> transaction History
         Queue<String> billQueue = new LinkedList<>();
         Queue<BankAccount> accountRequests = new LinkedList<>();
         int id = 0;
@@ -41,7 +41,7 @@ public class MiniBankingMenu {
                         int number = scanner.nextInt();
                         scanner.nextLine();
                         switch (number) {
-                            case 1:
+                            case 1: // Task 1, username, balance
                                 System.out.print("Enter username: ");
                                 String username = scanner.nextLine();
                                 System.out.print("Enter initial balance: ");
@@ -51,11 +51,11 @@ public class MiniBankingMenu {
                                 System.out.println("Account request added successfully to the queue");
                                 System.out.println();
                                 break;
-                            case 2:
+                            case 2: // Task 2, Deposite money, withdraw money
                                 System.out.print("Enter username: ");
                                 username = scanner.nextLine();
                                 boolean isFound = false;
-                                for (BankAccount account : Accounts) {
+                                for (BankAccount account : Accounts) { // Task 2, update balance inside LinkedList
                                     if (account.getUsername().equals(username)) {
                                         System.out.print("Deposit: ");
                                         double deposit = scanner.nextDouble();
@@ -63,7 +63,7 @@ public class MiniBankingMenu {
                                         account.deposit(deposit);
                                         isFound = true;
                                         System.out.println("New balance: " + account.getBalance());
-                                        transactions.push("Deposit " + deposit + " to " + username);
+                                        transactions.push("Deposit " + deposit + " to " + username); // Task 3, transactions
                                     }
                                 }
                                 if (!isFound) System.out.println("Username not found!");
@@ -101,7 +101,6 @@ public class MiniBankingMenu {
                     break; // ← обязательный break чтобы не упасть в case 2
 
                 // ── ATM MENU ──────────────────────────────────────────────
-                // БАГ ИСПРАВЛЕН: добавлен while-цикл + break в конце case
                 case 2:
                     boolean atmBack = false;
                     while (!atmBack) {
@@ -160,7 +159,7 @@ public class MiniBankingMenu {
                                 System.out.println("Invalid choice!");
                         }
                     }
-                    break; // ← БАГ ИСПРАВЛЕН: без этого break падает в Admin (case 3)
+                    break;
 
                 // ── ADMIN MENU ────────────────────────────────────────────
                 case 3:
