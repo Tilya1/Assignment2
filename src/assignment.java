@@ -100,10 +100,10 @@ public class assignment {
                     }
                     if (!isFound) System.out.println("Username not found!");
                     System.out.println();
-                    break; // ← БАГ ИСПРАВЛЕН: был fall-through в case 6
+                    break;
 
                 case 6:
-                    // БАГ ИСПРАВЛЕН: проверка на пустой стек
+
                     if (transactions.isEmpty()) {
                         System.out.println("No transactions to undo!");
                         break;
@@ -142,7 +142,7 @@ public class assignment {
                     break;
 
                 case 10:
-                    // БАГ ИСПРАВЛЕН: показываем всю очередь, а не только первый элемент
+
                     if (billQueue.isEmpty()) {
                         System.out.println("No bill payment request found!");
                         break;
@@ -156,7 +156,7 @@ public class assignment {
                     break;
 
                 case 11:
-                    // БАГ ИСПРАВЛЕН: используем Iterator вместо for-each для безопасного удаления
+
                     if (accountRequests.isEmpty()) {
                         System.out.println("No request found!");
                         break;

@@ -2,7 +2,7 @@ import java.util.*;
 
 public class MiniBankingMenu {
 
-    public static void main(String[] args) { // БАГ ИСПРАВЛЕН: добавлен String[] args
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         LinkedList<BankAccount> Accounts = new LinkedList<>();
         Stack<String> transactions = new Stack<>();
@@ -191,7 +191,7 @@ public class MiniBankingMenu {
                                 }
                                 System.out.println();
                                 break;
-                            // БАГ ИСПРАВЛЕН: одобренные аккаунты добавляются в Accounts
+
                             case 2:
                                 if (accountRequests.isEmpty()) {
                                     System.out.println("No pending requests!");
@@ -216,7 +216,7 @@ public class MiniBankingMenu {
                                 System.out.println();
                                 break;
                             case 3:
-                                // БАГ ИСПРАВЛЕН: добавлен break — раньше сразу уходил на "Back"
+
                                 System.out.println("Bill Payment Queue:");
                                 if (billQueue.isEmpty()) {
                                     System.out.println("No bill payments found!");
@@ -227,7 +227,7 @@ public class MiniBankingMenu {
                                     }
                                 }
                                 System.out.println();
-                                break; // ← БАГ ИСПРАВЛЕН
+                                break;
                             case 4:
                                 adminBack = true;
                                 break;
